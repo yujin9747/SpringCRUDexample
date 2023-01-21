@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View employees</title>
+</head>
+<body>
+<h1>Employees List</h1>
+<table>
+  <tr><th>Id</th><th>Name</th><th>Salary</th><th>Designation</th><th>Edit</th><th>Delete</th></tr>
+    <tr th:each="emp: ${list}">
+      <td th:text="${emp.id}">id</td>
+      <td th:text="${emp.name}">name</td>
+      <td th:text="${emp.salary}">salary</td>
+      <td th:text="${emp.designation}">designation</td>
+      <td><a th:href="@{/editemp/{id}(id=${emp.id})}">Edit</a></td>
+      <td><a th:href="@{/deleteemp/{id}(id=${emp.id})}">Delete</a></td>
+    </tr>
+</table>
+<br/>
+<a href="/empform">Add New Employee</a>
+</body>
+</html>

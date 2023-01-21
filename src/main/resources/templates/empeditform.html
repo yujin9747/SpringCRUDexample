@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>empeditform.html</title>
+</head>
+<body>
+<h1>Edit Employee</h1>
+<form method="POST" action="/editsave">
+  <table >
+    <tr>
+      <td></td>
+      <td><input type="hidden" name="id" th:value="${emp.id}"></td>
+    </tr>
+    <tr>
+      <td>Name : </td>
+      <td><input type="text" name="name" th:value="${emp.name}"></td>
+    </tr>
+    <tr>
+      <td>Salary :</td>
+      <td><input type="number" name="salary" th:value="${emp.salary}"></td>
+    </tr>
+    <tr>
+      <td>Designation :</td>
+      <td><input type="text" name="designation" th:value="${emp.designation}"></td>
+    </tr>
+
+    <tr>
+      <td> </td>
+      <td><input type="submit" value="Edit Save" /></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>
